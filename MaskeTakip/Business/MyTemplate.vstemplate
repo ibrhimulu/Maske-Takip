@@ -1,0 +1,36 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Business</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Business</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Business.csproj" File="Business.csproj" ReplaceParameters="true">
+      <Folder Name="Abstract" TargetFolderName="Abstract">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IApplicantService.cs">IApplicantService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ISupplierService.cs">ISupplierService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Concrete" TargetFolderName="Concrete">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ForeignerManager.cs">ForeignerManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PersonManager.cs">PersonManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PttManager.cs">PttManager.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Connected Services" TargetFolderName="Connected Services">
+        <Folder Name="MernisServiceReference" TargetFolderName="MernisServiceReference">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ConnectedService.json">ConnectedService.json</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Reference.cs">Reference.cs</ProjectItem>
+        </Folder>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
